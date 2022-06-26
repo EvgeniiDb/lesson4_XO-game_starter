@@ -19,7 +19,7 @@ public enum Player: CaseIterable {
         }
     }
     
-    var markViewPrototype: MarkView {
-        return self == .first ? XView() : OView()
-    }
+//    var markViewPrototype: MarkView {
+//        return self == .first ? XView() : OView()
+//    }
 }

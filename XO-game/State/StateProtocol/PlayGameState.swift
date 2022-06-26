@@ -1,5 +1,5 @@
 //
-//  GameState.swift
+//  PlayGameState.swift
 //  XO-game
 //
 //  Created by Евгений Доброволец on 22.06.2022.
@@ -8,10 +8,11 @@
 
 import Foundation
 
-protocol GameState {
-    var isCompleted: Bool { get }
-    
+protocol PlayGameState {
+    var isMoveCompleted: Bool { get set }
+    func addSign(at position: GameboardPosition)
     func begin()
-    
-    func addMark(at position: GameboardPosition)
 }
+
+
+

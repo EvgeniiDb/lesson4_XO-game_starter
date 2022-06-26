@@ -9,22 +9,28 @@
 import Foundation
 
 class LogCommand {
-    let action: LogAction
-    
+    // MARK: - Public Methods
+
     var logMessage: String {
         switch action {
-        case .playerInput(let player, let position):
-            return "\(player) placed mark at \(position)"
+        case .playerSetSign(let player, let position):
+            return "\(player) placed mark at position \(position)"
         case .gameFinished(let winner):
             if let winner = winner {
-                return "\(winner) win game"
+                return "\(winner) won game"
             } else {
-                return "game finished with no winner"
+                return "Is Draw"
             }
         case .restartGame:
-            return "game restarted"
+            return "Game was restarted"
         }
     }
+
+    // MARK: - Private Properties
+
+    private let action: LogAction
+
+    // MARK: - Initialization
     
     init(action: LogAction) {
         self.action = action
