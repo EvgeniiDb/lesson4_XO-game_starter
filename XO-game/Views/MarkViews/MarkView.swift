@@ -11,6 +11,7 @@ import UIKit
 public class MarkView: UIView, Copying {
     
     
+    
     // MARK: - Properties
     
     public var lineColor: UIColor = .black
@@ -64,11 +65,12 @@ public class MarkView: UIView, Copying {
         super.init(coder: aDecoder)
     }
     
-    required init(_ prototype: MarkView) {
-        super.init(frame: prototype.frame)
-        self.lineColor = prototype.lineColor
-        self.lineWidth = prototype.lineWidth
-        self.textColor = prototype.textColor
+    required init(_ protype: MarkView) {
+        super.init(frame: protype.frame)
+        
+        self.lineColor = protype.lineColor
+        self.lineWidth = protype.lineWidth
+        self.textColor = protype.textColor
     }
     
     // MARK: - UIView
